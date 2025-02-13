@@ -16,14 +16,14 @@ public class CreateUser {
             pstmt.setString(2, email);
             pstmt.setString(3, motDePasse);
             pstmt.executeUpdate();
-            System.out.println("✅ Utilisateur ajouté avec succès !");
+            System.out.println("user ajoute");
 
         } catch (SQLException e) {
-            System.out.println("❌ Erreur lors de l'ajout de l'utilisateur : " + e.getMessage());
+            System.out.println(" Erreur lors de l ajout : " + e.getMessage());
         }
     }
 
     public static void main(String[] args) {
-        addUser("Zakaria", "zakaria@example.com", "123456");
+       
     }
 }
