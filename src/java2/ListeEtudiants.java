@@ -117,7 +117,7 @@ public class ListeEtudiants extends JFrame {
         String telephone = telephoneField.getText();
 
         if (nom.isEmpty() || prenom.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Veuillez remplir tous les champs !");
+            JOptionPane.showMessageDialog(this, "Veuillez remplir tous les champs ");
             return;
         }
 
@@ -141,7 +141,7 @@ public class ListeEtudiants extends JFrame {
     private void modifierEtudiant() {
         String selectedValue = etudiantsList.getSelectedValue();
         if (selectedValue == null) {
-            JOptionPane.showMessageDialog(this, "Sélectionnez un étudiant à modifier !");
+            JOptionPane.showMessageDialog(this, "Selectionnez un étudiant a modifier ");
             return;
         }
 
@@ -159,7 +159,7 @@ public class ListeEtudiants extends JFrame {
             pstmt.setString(3, nom);
             pstmt.setString(4, selectedAnnee);
             pstmt.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Étudiant modifié !");
+            JOptionPane.showMessageDialog(this, "Étudiant modifie avec succes ");
             chargerEtudiants();
 
         } catch (SQLException e) {
@@ -170,7 +170,7 @@ public class ListeEtudiants extends JFrame {
     private void supprimerEtudiant() {
         String selectedValue = etudiantsList.getSelectedValue();
         if (selectedValue == null) {
-            JOptionPane.showMessageDialog(this, "Sélectionnez un étudiant à supprimer !");
+            JOptionPane.showMessageDialog(this, "Selectionnez un étudiant a supprimer !");
             return;
         }
 
@@ -180,7 +180,7 @@ public class ListeEtudiants extends JFrame {
             pstmt.setString(1, selectedValue.split(" ")[0]);
             pstmt.setString(2, selectedAnnee);
             pstmt.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Étudiant supprimé !");
+            JOptionPane.showMessageDialog(this, "Étudiant supprime avec succes");
             chargerEtudiants();
 
         } catch (SQLException e) {
