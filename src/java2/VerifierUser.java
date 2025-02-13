@@ -16,10 +16,10 @@ public class VerifierUser {
             pstmt.setString(2, motDePasse);
             ResultSet rs = pstmt.executeQuery();
 
-            return rs.next(); // ✅ Si un utilisateur existe, retourne true
+            return rs.next(); 
 
         } catch (SQLException e) {
-            System.out.println("❌ Erreur SQL : " + e.getMessage());
+            System.out.println(" Erreur SQL : " + e.getMessage());
             return false;
         }
     }
