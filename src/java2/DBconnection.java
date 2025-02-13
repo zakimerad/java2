@@ -16,7 +16,7 @@ public class DBconnection {
         try {
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
-            System.out.println("❌ Erreur de connexion : " + e.getMessage());
+            System.out.println(" Erreur de connexion vers bdd : " + e.getMessage());
             return null;
         }
     }
