@@ -8,7 +8,7 @@ public class JAVA2 {
 
 
 public static void main(String[] args) {
-        //SwingUtilities.invokeLater(() -> new LoginApp());
+        
         LoginApp sg = new LoginApp();
     }
     
